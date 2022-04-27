@@ -4,10 +4,12 @@ import java.util.ArrayList;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import com.github.sanchezih.jersey.entity.Curso;
+import com.github.sanchezih.jersey.entity.Pais;
 import com.github.sanchezih.jersey.service.CursosService;
 import com.github.sanchezih.jersey.service.HealthCheckService;
 
@@ -30,6 +32,13 @@ public class CursoController {
 	@Produces(MediaType.APPLICATION_JSON)
 	public ArrayList<Curso> getAllCursos() {
 		return cursosService.getAllCursos();
+	}
+
+	@GET
+	@Path("/{id}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Curso getCursoById(@PathParam("id") int id) {
+		return cursosService.getCursoId(id);
 	}
 
 }
