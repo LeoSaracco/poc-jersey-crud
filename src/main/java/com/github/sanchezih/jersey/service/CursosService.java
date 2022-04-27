@@ -2,6 +2,9 @@ package com.github.sanchezih.jersey.service;
 
 import java.util.ArrayList;
 
+import javax.net.ssl.SSLEngineResult.Status;
+import javax.ws.rs.core.Response;
+
 import com.github.sanchezih.jersey.entity.Curso;
 
 public class CursosService {
@@ -70,5 +73,15 @@ public class CursosService {
 			e.printStackTrace();
 		}
 		return null;
+	}
+
+	public Response deleteCurso(int id) {
+		try {
+			listaCursos.remove(id - 1);
+			return Response.ok().build();
+		} catch (Exception e) {
+			e.printStackTrace();
+			return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
+		}
 	}
 }
