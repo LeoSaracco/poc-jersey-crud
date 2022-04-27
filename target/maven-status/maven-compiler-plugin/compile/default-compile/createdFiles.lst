@@ -1,7 +1,0 @@
-com/github/sanchezih/jersey/service/CursosService.class
-com/github/sanchezih/jersey/controller/PaisController.class
-com/github/sanchezih/jersey/entity/Curso.class
-com/github/sanchezih/jersey/controller/CursoController.class
-com/github/sanchezih/jersey/service/PaisService.class
-com/github/sanchezih/jersey/entity/Pais.class
-com/github/sanchezih/jersey/service/HealthCheckService.class
