@@ -3,7 +3,6 @@ package com.github.sanchezih.jersey.service;
 import java.util.ArrayList;
 
 import com.github.sanchezih.jersey.entity.Curso;
-import com.github.sanchezih.jersey.entity.Pais;
 
 public class CursosService {
 
@@ -20,7 +19,6 @@ public class CursosService {
 			c1.setIdCurso(1);
 			c1.setNombreCurso("Fullstack");
 			c1.setHorarioCurso("08:00 - 10:00");
-
 			listaCursos.add(c1);
 			Curso c2 = new Curso();
 			c2.setIdCurso(2);
@@ -44,5 +42,20 @@ public class CursosService {
 			indice++;
 		}
 		return null;
+	}
+
+	
+	public Curso addCurso(Curso curso) {
+		Curso c = new Curso();
+		c.setIdCurso(listaCursos.size() + 1);
+		c.setNombreCurso(curso.getNombreCurso());
+		c.setHorarioCurso(curso.getHorarioCurso());
+		try {
+			listaCursos.add(c);
+			return curso;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
 	}
 }

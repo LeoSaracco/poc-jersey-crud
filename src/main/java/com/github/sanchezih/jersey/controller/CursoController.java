@@ -3,13 +3,13 @@ package com.github.sanchezih.jersey.controller;
 import java.util.ArrayList;
 
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import com.github.sanchezih.jersey.entity.Curso;
-import com.github.sanchezih.jersey.entity.Pais;
 import com.github.sanchezih.jersey.service.CursosService;
 import com.github.sanchezih.jersey.service.HealthCheckService;
 
@@ -41,4 +41,9 @@ public class CursoController {
 		return cursosService.getCursoId(id);
 	}
 
+	@POST
+	@Produces(MediaType.APPLICATION_JSON)
+	public Curso addCurso(Curso curso) {
+		return cursosService.addCurso(curso);
+	}
 }
