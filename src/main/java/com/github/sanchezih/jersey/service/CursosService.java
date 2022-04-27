@@ -9,7 +9,7 @@ public class CursosService {
 	public static ArrayList<Curso> listaCursos = new ArrayList<Curso>();
 
 	private static ArrayList<Curso> getCursos() {
-		if (listaCursos != null) {
+		if (listaCursos.isEmpty()) {
 			Curso c1 = new Curso();
 			c1.setIdCurso(1);
 			c1.setNombreCurso("Fullstack");
