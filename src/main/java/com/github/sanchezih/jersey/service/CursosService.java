@@ -44,7 +44,6 @@ public class CursosService {
 		return null;
 	}
 
-	
 	public Curso addCurso(Curso curso) {
 		Curso c = new Curso();
 		c.setIdCurso(listaCursos.size() + 1);
@@ -57,5 +56,19 @@ public class CursosService {
 			e.printStackTrace();
 			return null;
 		}
+	}
+
+	public Curso updateCurso(Curso curso) {
+		Curso c = new Curso();
+		c.setIdCurso(curso.getIdCurso());
+		c.setNombreCurso(curso.getNombreCurso());
+		c.setHorarioCurso(curso.getHorarioCurso());
+		try {
+			listaCursos.set(curso.getIdCurso() - 1, c);
+			return c;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 }
