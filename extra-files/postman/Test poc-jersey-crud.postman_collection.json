@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "e7b1ad93-7437-42ac-adf3-d3314cf3d100",
+		"name": "Test poc-jersey-crud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "01. Get all paises",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/poc-jersey-crud/rest/paises",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"poc-jersey-crud",
+						"rest",
+						"paises"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "02. Insert pais",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 5,\r\n    \"nombre\": \"Paraguay\",\r\n    \"poblacion\": 7353000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/poc-jersey-crud/rest/paises",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"poc-jersey-crud",
+						"rest",
+						"paises"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "03. Get all paises",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/poc-jersey-crud/rest/paises",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"poc-jersey-crud",
+						"rest",
+						"paises"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "04. Delete pais 4",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/poc-jersey-crud/rest/paises/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"poc-jersey-crud",
+						"rest",
+						"paises",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "05. Get all paises",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/poc-jersey-crud/rest/paises",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"poc-jersey-crud",
+						"rest",
+						"paises"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
